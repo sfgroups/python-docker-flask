@@ -1,6 +1,6 @@
 astroid==1.6.0
 click==6.7
-Flask==0.12.2
+Flask==1.0.2
 gunicorn==19.9.0
 isort==4.2.15
 itsdangerous==0.24
