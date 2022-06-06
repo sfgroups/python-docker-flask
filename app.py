@@ -1,5 +1,11 @@
-from flask import Flask, Response
+from flask import Flask, Response, request
 app = Flask(__name__)
+
+@app.before_request
+def log_request():
+    app.logger.debug("Request Headers %s", request.headers)
+    return None
+
 @app.route("/")
 def hello():
     return Response("Hi from your Flask app running in your Docker container!")
